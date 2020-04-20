@@ -25,7 +25,7 @@ H E J C F I F G K N U T H A N
 '''
 
 from time import sleep
-
+#Famous CS people
 words =["BABBAGE","BERNERSLEE","BOOLE","BRIN","GATES","HOOPER","JOBS","KNUTH",
 "LOVELACE","PAGE","TURING","WOZNIAK","ZUCKERBERG","MOORE","VANROSSUM"]
 
