@@ -8,43 +8,58 @@ This program finds a list of words in a grid. Words may be found in any
 of the 8 compass dirctions
 """
 '''
-E N G G H L M E K C L G V S E
-Q L C R C Z R E S R E H F E X
-U D O L E O F L U N D R Z P N
-W D C O O B T S Z K Q H J M M
-O S J M B U R R K U T N P U P
-Z R E R R T R E P O O H S E Z
-N C I I N J Z N K V J S E V B
-I N N J K I Z R P C O C T P S
-A G B Y O U P E J R U V A A W
-K L S A F B P B N S T Z G G Z
-Z T I H B D S A M W T O R E B
-F P R Y E B V C F I B K Q I K
-N G E I O W A H J N W Q L F H
-H E J C F I F G K N U T H A N
+Word finds puzzle for XMAS words list below
+
+V A D M T X R A N G I F T C Z N S H F Q 
+S U A L C A T N A S O D M Z U F O C V S 
+D E Y C L C N L B F Q I N R K T L O Y T 
+N Q P O H S L E I G H P H E U J N K N N 
+A V F U N I J V L V P U C I W K M Q O I 
+L D Z S Y O M C D U L C O N R R I Q I C 
+R A L L E U R N O V O Z S D E I L U T K 
+A S L Z C O S T E H D M C E A S K G A Y 
+G H B S S M T X H Y U Q U E T S A R R N 
+M E B L I T Z E N P R F H R H K N R O P 
+N R R Z N T N C L M O E N U U R D E C O 
+T Y Z E W B E I W T T L E H T I C C E F 
+P A Z E C M A E C B S C E L N N O N D L 
+V J L Y N N P Y R H A I U E E G O A K E 
+P E D P Z R A E O L O M M R M L K R R S 
+O E Q M E L N D P K L L A J A E I P P N 
+U L M S F N S E V E F C A R N M E V W I 
+Q J E I O W R U C U C V C S R H S U C T 
+M N I D O I V I X E N I P R O C J B V C 
+T C D O F E G G N O G X I C O M E T W A 
 '''
 
 from time import sleep
-#Famous CS people
-words =["BABBAGE","BERNERSLEE","BOOLE","BRIN","GATES","HOOPER","JOBS","KNUTH",
-"LOVELACE","PAGE","TURING","WOZNIAK","ZUCKERBERG","MOORE","VANROSSUM"]
 
-puzzle = [["E", "N", "G", "E", "H", "L", "M", "E", "K", "C", "L", "G", "V", "S", "E"],
-["Q", "L", "C", "R", "C", "Z", "R", "E", "S", "R", "E", "H", "F", "E", "X"],
-["U", "D", "O", "O", "E", "O", "F", "L", "U", "N", "D", "R", "Z", "P", "N"],
-["W", "D", "C", "O", "O", "B", "T", "S", "Z", "K", "Q", "H", "J", "M", "M"],
-["O", "S", "J", "M", "B", "U", "R", "R", "K", "U", "T", "N", "P", "U", "P"],
-["Z", "R", "E", "R", "R", "T", "R", "E", "P", "O", "O", "H", "S", "E", "Z"],
-["N", "C", "I", "I", "N", "J", "Z", "N", "K", "V", "J", "S", "E", "V", "B"],
-["I", "N", "N", "J", "K", "I", "Z", "R", "P", "C", "O", "C", "T", "P", "S"],
-["A", "G", "B", "Y", "O", "U", "P", "E", "J", "R", "U", "V", "A", "A", "W"],
-["K", "L", "S", "A", "F", "B", "P", "B", "N", "S", "T", "Z", "G", "G", "Z"],
-["Z", "T", "I", "H", "B", "D", "S", "A", "M", "W", "T", "O", "R", "E", "B"],
-["F", "P", "R", "Y", "E", "B", "V", "C", "F", "I", "B", "K", "Q", "I", "K"],
-["N", "G", "E", "I", "O", "W", "A", "H", "J", "N", "W", "Q", "L", "F", "H"],
-["H", "E", "J", "C", "F", "I", "F", "G", "K", "N", "U", "T", "H", "A", "N"],
-["Q", "L", "O", "V", "E", "L", "A", "C", "E", "B", "G", "M", "V", "L", "T"]]
+words = ['BLITZEN', 'CHIMNEY', 'COMET', 'CUPID', 'DANCER', 'DASHER', 'DECORATION', 'DONNER', 
+         'EGGNOG', 'FIREPLACE', 'GARLAND', 'GIFT', 'KRISS KRINGLE', 'MILK AND COOKIES',
+         'MISTLETOE', 'NORTH POLE', 'ORNAMENT', 'PRANCER', 'PRESENT', 'REINDEER', 'RUDOLPH', 
+         'SANTA CLAUS', 'SLEIGH', 'ST NICHOLAS', 'ST NICK', 'TINSEL', 'VIXEN', 'WREATH']
 
+
+puzzle = [['V', 'A', 'D', 'M', 'T', 'X', 'R', 'A', 'N', 'G', 'I', 'F', 'T', 'C', 'Z', 'N', 'S', 'H', 'F', 'Q'], 
+          ['S', 'U', 'A', 'L', 'C', 'A', 'T', 'N', 'A', 'S', 'O', 'D', 'M', 'Z', 'U', 'F', 'O', 'C', 'V', 'S'], 
+          ['D', 'E', 'Y', 'C', 'L', 'C', 'N', 'L', 'B', 'F', 'Q', 'I', 'N', 'R', 'K', 'T', 'L', 'O', 'Y', 'T'], 
+          ['N', 'Q', 'P', 'O', 'H', 'S', 'L', 'E', 'I', 'G', 'H', 'P', 'H', 'E', 'U', 'J', 'N', 'K', 'N', 'N'], 
+          ['A', 'V', 'F', 'U', 'N', 'I', 'J', 'V', 'L', 'V', 'P', 'U', 'C', 'I', 'W', 'K', 'M', 'Q', 'O', 'I'], 
+          ['L', 'D', 'Z', 'S', 'Y', 'O', 'M', 'C', 'D', 'U', 'L', 'C', 'O', 'N', 'R', 'R', 'I', 'Q', 'I', 'C'], 
+          ['R', 'A', 'L', 'L', 'E', 'U', 'R', 'N', 'O', 'V', 'O', 'Z', 'S', 'D', 'E', 'I', 'L', 'U', 'T', 'K'], 
+          ['A', 'S', 'L', 'Z', 'C', 'O', 'S', 'T', 'E', 'H', 'D', 'M', 'C', 'E', 'A', 'S', 'K', 'G', 'A', 'Y'], 
+          ['G', 'H', 'B', 'S', 'S', 'M', 'T', 'X', 'H', 'Y', 'U', 'Q', 'U', 'E', 'T', 'S', 'A', 'R', 'R', 'N'], 
+          ['M', 'E', 'B', 'L', 'I', 'T', 'Z', 'E', 'N', 'P', 'R', 'F', 'H', 'R', 'H', 'K', 'N', 'R', 'O', 'P'], 
+          ['N', 'R', 'R', 'Z', 'N', 'T', 'N', 'C', 'L', 'M', 'O', 'E', 'N', 'U', 'U', 'R', 'D', 'E', 'C', 'O'], 
+          ['T', 'Y', 'Z', 'E', 'W', 'B', 'E', 'I', 'W', 'T', 'T', 'L', 'E', 'H', 'T', 'I', 'C', 'C', 'E', 'F'], 
+          ['P', 'A', 'Z', 'E', 'C', 'M', 'A', 'E', 'C', 'B', 'S', 'C', 'E', 'L', 'N', 'N', 'O', 'N', 'D', 'L'], 
+          ['V', 'J', 'L', 'Y', 'N', 'N', 'P', 'Y', 'R', 'H', 'A', 'I', 'U', 'E', 'E', 'G', 'O', 'A', 'K', 'E'], 
+          ['P', 'E', 'D', 'P', 'Z', 'R', 'A', 'E', 'O', 'L', 'O', 'M', 'M', 'R', 'M', 'L', 'K', 'R', 'R', 'S'], 
+          ['O', 'E', 'Q', 'M', 'E', 'L', 'N', 'D', 'P', 'K', 'L', 'L', 'A', 'J', 'A', 'E', 'I', 'P', 'P', 'N'], 
+          ['U', 'L', 'M', 'S', 'F', 'N', 'S', 'E', 'V', 'E', 'F', 'C', 'A', 'R', 'N', 'M', 'E', 'V', 'W', 'I'], 
+          ['Q', 'J', 'E', 'I', 'O', 'W', 'R', 'U', 'C', 'U', 'C', 'V', 'C', 'S', 'R', 'H', 'S', 'U', 'C', 'T'], 
+          ['M', 'N', 'I', 'D', 'O', 'I', 'V', 'I', 'X', 'E', 'N', 'I', 'P', 'R', 'O', 'C', 'J', 'B', 'V', 'C'], 
+          ['T', 'C', 'D', 'O', 'F', 'E', 'G', 'G', 'N', 'O', 'G', 'X', 'I', 'C', 'O', 'M', 'E', 'T', 'W', 'A']]
 
 #Checks if a location i, j is valid
 def isValid(puzzle, i, j):
@@ -179,7 +194,8 @@ def searchWNW(puzzle,i,j,word):
         pos+=1
     return True
 
-
-for w in words:
+#Displays if word was found, then display location and direction
+for word in words:
+    w = word.replace(" ", "")
     search(puzzle,w)
     sleep(.5)
