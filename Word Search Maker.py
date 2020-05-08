@@ -9,7 +9,7 @@ Created on Wed May  6 22:33:19 2020
 Given a list of words this program creates a random WORD SEARCH puzzle
 Words may be placed in any of the eight compass dirctions
 
-For example can be found in the directions:
+For example, words can be found in the directions:
 N, ENE, E, ESE, S, WSW, W, WNW
          
         E    E    E 
