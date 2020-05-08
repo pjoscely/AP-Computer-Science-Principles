@@ -219,7 +219,7 @@ func_list = [tryPlaceN,tryPlaceENE,tryPlaceE,tryPlaceESE,tryPlaceS,tryPlaceWSW,
 #Initialize grid
 grid= [['_' for i in range(20)] for j in range(20)]
 
-# ***** NB if the grid is too small for the the length or the word lengths
+# ***** NB if the grid is too small for length of the word list or the individual word lengths
 # ***** in the word list. The placement algorithm below might not terminate
 
 for word in words:
@@ -235,7 +235,7 @@ padGrid(grid)
 #Display final grid ready for a word search
 printGrid(grid)
 '''
-Sample out 
+Sample output
 
 I L K F D H D N E Z T I L B V A S P M O 
 E V V I X E N D B J L Z B O N F F L Y F 
