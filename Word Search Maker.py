@@ -220,16 +220,17 @@ func_list = [tryPlaceN,tryPlaceENE,tryPlaceE,tryPlaceESE,tryPlaceS,tryPlaceWSW,
 grid= [['_' for i in range(20)] for j in range(20)]
 
 # ***** NB if the grid is too small for length of the word list or the individual word lengths
-# ***** in the word list. The placement algorithm below might not terminate
+# ***** in the word list, the word placement algorithm below might not terminate.
 
 for word in words:
     #Note this might not terminate
     placeWord(grid,func_list,word)
     print('***************************************')
     printGrid(grid)
+    #delay enables one to see the grid fill   
     sleep(.5)
     
-#Complete grid with random letters
+#Complete the grid with random letters
 padGrid(grid)
 
 #Display final grid ready for a word search
