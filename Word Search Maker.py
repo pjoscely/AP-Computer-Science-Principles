@@ -9,7 +9,7 @@ Created on Wed May  6 22:33:19 2020
 Given a list of words this program creates a random WORD SEARCH puzzle
 Words may be placed in any of the eight compass dirctions
 
-For example, words can be found in the directions:
+For example can be found in the directions:
 N, ENE, E, ESE, S, WSW, W, WNW
          
         E    E    E 
@@ -213,30 +213,30 @@ def padGrid(grid):
                 
 
 #List of 8 placement functions
+#Functions are First Class Citizens in Python              
 func_list = [tryPlaceN,tryPlaceENE,tryPlaceE,tryPlaceESE,tryPlaceS,tryPlaceWSW,
              tryPlaceW,tryPlaceWNW]
 
 #Initialize grid
 grid= [['_' for i in range(20)] for j in range(20)]
 
-# ***** NB if the grid is too small for length of the word list or the individual word lengths
-# ***** in the word list, the word placement algorithm below might not terminate.
+# ***** NB if the grid is too small for the the length or the word lengths
+# ***** in the word list. The placement algorithm below might not terminate
 
 for word in words:
     #Note this might not terminate
     placeWord(grid,func_list,word)
     print('***************************************')
     printGrid(grid)
-    #delay enables one to see the grid fill   
     sleep(.5)
     
-#Complete the grid with random letters
+#Complete grid with random letters
 padGrid(grid)
 
 #Display final grid ready for a word search
 printGrid(grid)
 '''
-Sample output
+Sample output 
 
 I L K F D H D N E Z T I L B V A S P M O 
 E V V I X E N D B J L Z B O N F F L Y F 
