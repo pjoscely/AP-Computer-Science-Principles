@@ -16,7 +16,7 @@ The colors of all other squares are left unchanged.
 What is the probability that the grid is now entirely black?
 
 The program simulates the problem scenario keeping track of the number of 
-favorable outcomes. The ratio = favorables/(total trials) is computed and comopared to 
+favorable outcomes. The ratio = favorables/(total trials) is computed and compared to 
 the exact mathematical probability.
 """
 import random 
