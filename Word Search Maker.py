@@ -53,6 +53,10 @@ the word. If successfull, place the word and
 repeat on the next word. If unable to place the word 
 repeat the process at a new random position until 
 the word is successfully placed in the grid.
+
+Note: The eight functions should be consolidated 
+into a single function but are presented as is
+for student practice in function writing. 
 '''
 
 #Try to place word to the North
